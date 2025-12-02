@@ -1,10 +1,10 @@
-import dataNetwork from "@/assets/data-network.jpg";
+import handsKeyboardBw from "@/assets/hands-keyboard-bw.jpg";
 
 const steps = [
   {
     number: "01",
     title: "On discute 15 minutes",
-    description: "Vous nous expliquez votre activité, vos clients idéaux, vos objectifs. On prend des notes.",
+    description: "Vous nous expliquez votre activité, vos clients idéaux, vos objectifs.",
   },
   {
     number: "02",
@@ -13,57 +13,63 @@ const steps = [
   },
   {
     number: "03",
-    title: "Vous recevez des contacts qualifiés",
-    description: "Les personnes intéressées arrivent dans votre boîte. Vous les appelez, vous signez.",
+    title: "Vous recevez des contacts",
+    description: "Les personnes intéressées arrivent dans votre boîte. Vous signez.",
   },
 ];
 
 export const ProcessSection = () => {
   return (
-    <section id="processus" className="py-24 lg:py-32 bg-navy text-white relative overflow-hidden">
+    <section id="processus" className="py-24 lg:py-32 bg-primary text-primary-foreground relative border-b border-primary-foreground/20">
       {/* Background Image */}
       <div className="absolute inset-0">
         <img 
-          src={dataNetwork} 
+          src={handsKeyboardBw} 
           alt="" 
-          className="w-full h-full object-cover opacity-30"
+          className="w-full h-full object-cover opacity-20"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/90 to-navy" />
+        <div className="absolute inset-0 bg-primary/90" />
       </div>
+
+      <div className="absolute inset-0 dark-grid" />
       
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <span className="text-xs font-medium text-electric uppercase tracking-widest">
+        <div className="max-w-3xl mb-16">
+          <span className="text-xs font-bold text-primary-foreground/50 uppercase tracking-widest">
             Le processus
           </span>
-          <h2 className="text-3xl lg:text-5xl font-bold text-white mt-4 mb-6">
-            3 étapes. C'est tout.
+          <h2 className="text-4xl lg:text-6xl font-black text-primary-foreground mt-4 leading-tight">
+            3 étapes.
+            <br />
+            <span className="text-primary-foreground/50">C'est tout.</span>
           </h2>
         </div>
 
-        <div className="grid md:grid-cols-3 gap-8 mb-16">
+        <div className="grid lg:grid-cols-3 gap-0">
           {steps.map((step, index) => (
             <div
               key={index}
-              className="relative p-8 border border-white/10 rounded-lg bg-white/5 backdrop-blur-sm"
+              className={`p-8 lg:p-10 border-t border-primary-foreground/20 ${index > 0 ? 'lg:border-l' : ''}`}
             >
-              <span className="text-6xl font-bold text-electric/20 absolute top-4 right-4">
+              <span className="text-6xl lg:text-7xl font-black text-amber/30">
                 {step.number}
               </span>
-              <h3 className="text-xl font-bold text-white mb-4 relative z-10">
+              <h3 className="text-xl font-bold text-primary-foreground mt-4 mb-3">
                 {step.title}
               </h3>
-              <p className="text-white/70 leading-relaxed relative z-10">
+              <p className="text-primary-foreground/60 leading-relaxed">
                 {step.description}
               </p>
             </div>
           ))}
         </div>
 
-        <p className="text-center text-lg text-white/80 max-w-2xl mx-auto">
-          Pendant ce temps, vous faites votre métier. 
-          <span className="text-electric font-semibold"> Nous, on remplit votre carnet de commandes.</span>
-        </p>
+        <div className="mt-16 pt-8 border-t border-primary-foreground/20">
+          <p className="text-xl text-primary-foreground/70 max-w-2xl">
+            Pendant ce temps, vous faites votre métier. 
+            <span className="text-amber font-bold"> Nous, on remplit votre carnet de commandes.</span>
+          </p>
+        </div>
       </div>
     </section>
   );

@@ -2,101 +2,91 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;500;600;700;800;900&display=swap');
 
 @layer base {
   :root {
-    /* LeadFactory Swiss Corporate Design System */
-    --background: 210 40% 99.5%;
-    --foreground: 222 47% 11%;
+    /* Neo-Brutalist Industrial Design System */
+    --background: 0 0% 96%;
+    --foreground: 0 0% 4%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222 47% 11%;
+    --card: 0 0% 96%;
+    --card-foreground: 0 0% 4%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222 47% 11%;
+    --popover: 0 0% 96%;
+    --popover-foreground: 0 0% 4%;
 
-    /* Deep Navy Blue - Primary brand color */
-    --primary: 222 47% 11%;
-    --primary-foreground: 210 40% 98%;
+    /* Pitch Black - Primary */
+    --primary: 0 0% 4%;
+    --primary-foreground: 0 0% 96%;
 
-    /* Light cool grey surfaces */
-    --secondary: 210 40% 98%;
-    --secondary-foreground: 222 47% 11%;
+    /* Off-white surfaces */
+    --secondary: 0 0% 92%;
+    --secondary-foreground: 0 0% 4%;
 
-    /* Slate grey for muted elements */
-    --muted: 215 20% 65%;
-    --muted-foreground: 215 16% 47%;
+    /* Dark grey for muted */
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 40%;
 
-    /* Electric blue accent for CTAs */
-    --accent: 199 89% 48%;
-    --accent-foreground: 0 0% 100%;
+    /* Industrial Amber accent */
+    --accent: 42 100% 50%;
+    --accent-foreground: 0 0% 0%;
 
     --destructive: 0 84% 60%;
-    --destructive-foreground: 210 40% 98%;
+    --destructive-foreground: 0 0% 100%;
 
-    --border: 214 32% 91%;
-    --input: 214 32% 91%;
-    --ring: 199 89% 48%;
+    --border: 0 0% 0%;
+    --input: 0 0% 85%;
+    --ring: 42 100% 50%;
 
-    --radius: 0.25rem;
+    /* BRUTALIST: No border radius */
+    --radius: 0rem;
 
     /* Custom design tokens */
-    --navy: 222 47% 11%;
-    --navy-deep: 222 47% 8%;
-    --slate: 215 16% 47%;
-    --slate-light: 215 20% 65%;
-    --electric-blue: 199 89% 48%;
-    --cool-grey: 210 40% 98%;
-    --pure-white: 0 0% 100%;
+    --pitch-black: 0 0% 4%;
+    --off-white: 0 0% 96%;
+    --pure-black: 0 0% 0%;
+    --dark-grey: 0 0% 20%;
+    --amber: 42 100% 50%;
 
-    /* Glassmorphism */
-    --glass-bg: 0 0% 100% / 0.7;
-    --glass-border: 0 0% 100% / 0.2;
-    --glass-blur: 20px;
+    /* No shadows in brutalist */
+    --shadow-sm: none;
+    --shadow-md: none;
+    --shadow-lg: none;
+    --shadow-xl: none;
 
-    /* Shadows */
-    --shadow-sm: 0 1px 2px 0 hsl(222 47% 11% / 0.03);
-    --shadow-md: 0 4px 6px -1px hsl(222 47% 11% / 0.05), 0 2px 4px -2px hsl(222 47% 11% / 0.05);
-    --shadow-lg: 0 10px 15px -3px hsl(222 47% 11% / 0.08), 0 4px 6px -4px hsl(222 47% 11% / 0.05);
-    --shadow-xl: 0 20px 25px -5px hsl(222 47% 11% / 0.1), 0 8px 10px -6px hsl(222 47% 11% / 0.1);
-    --shadow-glow: 0 0 40px hsl(199 89% 48% / 0.15);
+    /* Sharp transitions */
+    --transition-fast: 100ms ease;
+    --transition-base: 200ms ease;
 
-    /* Transitions */
-    --transition-fast: 150ms cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-base: 300ms cubic-bezier(0.4, 0, 0.2, 1);
-    --transition-slow: 500ms cubic-bezier(0.4, 0, 0.2, 1);
-
-    --sidebar-background: 0 0% 98%;
-    --sidebar-foreground: 240 5.3% 26.1%;
-    --sidebar-primary: 240 5.9% 10%;
-    --sidebar-primary-foreground: 0 0% 98%;
-    --sidebar-accent: 240 4.8% 95.9%;
-    --sidebar-accent-foreground: 240 5.9% 10%;
-    --sidebar-border: 220 13% 91%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 0 0% 96%;
+    --sidebar-foreground: 0 0% 4%;
+    --sidebar-primary: 0 0% 4%;
+    --sidebar-primary-foreground: 0 0% 96%;
+    --sidebar-accent: 42 100% 50%;
+    --sidebar-accent-foreground: 0 0% 0%;
+    --sidebar-border: 0 0% 0%;
+    --sidebar-ring: 42 100% 50%;
   }
 
   .dark {
-    --background: 222 47% 8%;
-    --foreground: 210 40% 98%;
-    --card: 222 47% 11%;
-    --card-foreground: 210 40% 98%;
-    --popover: 222 47% 11%;
-    --popover-foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222 47% 11%;
-    --secondary: 217 33% 17%;
-    --secondary-foreground: 210 40% 98%;
-    --muted: 217 33% 17%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 199 89% 48%;
-    --accent-foreground: 0 0% 100%;
-    --destructive: 0 63% 31%;
-    --destructive-foreground: 210 40% 98%;
-    --border: 217 33% 17%;
-    --input: 217 33% 17%;
-    --ring: 199 89% 48%;
+    --background: 0 0% 4%;
+    --foreground: 0 0% 96%;
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 96%;
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 96%;
+    --primary: 0 0% 96%;
+    --primary-foreground: 0 0% 4%;
+    --secondary: 0 0% 12%;
+    --secondary-foreground: 0 0% 96%;
+    --muted: 0 0% 20%;
+    --muted-foreground: 0 0% 60%;
+    --accent: 42 100% 50%;
+    --accent-foreground: 0 0% 0%;
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 42 100% 50%;
   }
 }
 
@@ -111,85 +101,65 @@
 
   body {
     @apply bg-background text-foreground font-sans antialiased;
-    font-family: 'Inter', system-ui, sans-serif;
+    font-family: 'Inter Tight', system-ui, sans-serif;
   }
 }
 
 @layer components {
-  /* Glassmorphism card */
-  .glass-card {
-    @apply bg-card/70 backdrop-blur-xl border border-border/50;
-    box-shadow: var(--shadow-lg);
+  /* Brutalist card - no glass, just borders */
+  .brutalist-card {
+    @apply bg-background border border-primary;
   }
 
-  /* Grid overlay for Swiss style */
+  /* Grid overlay - Swiss style rigid grid */
   .grid-overlay {
     background-image: 
-      linear-gradient(hsl(var(--border) / 0.3) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--border) / 0.3) 1px, transparent 1px);
-    background-size: 60px 60px;
+      linear-gradient(hsl(var(--primary) / 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--primary) / 0.08) 1px, transparent 1px);
+    background-size: 80px 80px;
   }
 
-  /* Blueprint grid for dark sections */
-  .blueprint-grid {
+  /* Dark grid for black sections */
+  .dark-grid {
     background-image: 
-      linear-gradient(hsl(var(--electric-blue) / 0.1) 1px, transparent 1px),
-      linear-gradient(90deg, hsl(var(--electric-blue) / 0.1) 1px, transparent 1px);
-    background-size: 40px 40px;
+      linear-gradient(hsl(var(--off-white) / 0.05) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--off-white) / 0.05) 1px, transparent 1px);
+    background-size: 80px 80px;
   }
 
-  /* Animated node connection */
-  .node-pulse {
-    animation: pulse-glow 3s ease-in-out infinite;
+  /* Section divider line */
+  .section-divider {
+    @apply border-t border-primary;
   }
 
-  @keyframes pulse-glow {
-    0%, 100% {
-      opacity: 0.4;
-      filter: blur(0px);
-    }
-    50% {
-      opacity: 1;
-      filter: blur(1px);
-    }
+  /* Vertical divider */
+  .vertical-divider {
+    @apply border-l border-primary h-full;
   }
 
-  /* Subtle float animation */
-  .float {
-    animation: float 6s ease-in-out infinite;
+  /* Brutalist hover */
+  .brutalist-hover {
+    @apply transition-colors duration-100;
   }
 
-  @keyframes float {
-    0%, 100% {
-      transform: translateY(0px);
-    }
-    50% {
-      transform: translateY(-20px);
-    }
+  .brutalist-hover:hover {
+    @apply bg-amber text-black;
   }
 
-  /* Line draw animation */
-  .line-draw {
-    stroke-dasharray: 1000;
-    stroke-dashoffset: 1000;
-    animation: draw 3s ease-out forwards;
-  }
-
-  @keyframes draw {
-    to {
-      stroke-dashoffset: 0;
-    }
+  /* Invoice/spec sheet style */
+  .spec-sheet {
+    @apply border-2 border-primary bg-background;
   }
 
   /* Fade in up animation */
   .fade-in-up {
-    animation: fadeInUp 0.8s ease-out forwards;
+    animation: fadeInUp 0.6s ease-out forwards;
   }
 
   @keyframes fadeInUp {
     from {
       opacity: 0;
-      transform: translateY(30px);
+      transform: translateY(20px);
     }
     to {
       opacity: 1;
@@ -200,14 +170,38 @@
   /* Stagger children animation */
   .stagger-children > * {
     opacity: 0;
-    animation: fadeInUp 0.6s ease-out forwards;
+    animation: fadeInUp 0.4s ease-out forwards;
   }
 
-  .stagger-children > *:nth-child(1) { animation-delay: 0.1s; }
-  .stagger-children > *:nth-child(2) { animation-delay: 0.2s; }
-  .stagger-children > *:nth-child(3) { animation-delay: 0.3s; }
-  .stagger-children > *:nth-child(4) { animation-delay: 0.4s; }
-  .stagger-children > *:nth-child(5) { animation-delay: 0.5s; }
+  .stagger-children > *:nth-child(1) { animation-delay: 0s; }
+  .stagger-children > *:nth-child(2) { animation-delay: 0.1s; }
+  .stagger-children > *:nth-child(3) { animation-delay: 0.15s; }
+  .stagger-children > *:nth-child(4) { animation-delay: 0.2s; }
+  .stagger-children > *:nth-child(5) { animation-delay: 0.25s; }
+
+  /* Image grayscale filter */
+  .img-bw {
+    filter: grayscale(100%) contrast(1.1);
+  }
+
+  /* Noise texture overlay */
+  .noise-overlay::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23noise)'/%3E%3C/svg%3E");
+    opacity: 0.03;
+    pointer-events: none;
+  }
+
+  /* Scrollbar hide */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
 }
 
 @layer utilities {
