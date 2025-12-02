@@ -12,13 +12,6 @@ export const HeroSection = () => {
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center min-h-[calc(100vh-5rem)]">
           {/* Left: Text Content */}
           <div className="stagger-children pt-8 lg:pt-0">
-            <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary rounded-full mb-6">
-              <span className="w-2 h-2 bg-electric rounded-full animate-pulse" />
-              <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
-                Génération de leads B2B
-              </span>
-            </div>
-
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-[1.1] tracking-tight mb-6">
               On vous trouve des leads qualifiés en automatique.
               <br />
