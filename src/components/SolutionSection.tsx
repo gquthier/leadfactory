@@ -35,7 +35,7 @@ export const SolutionSection = () => {
           </div>
 
           {/* Text */}
-          <div>
+          <div className="text-center lg:text-left">
             <span className="text-xs font-medium text-electric uppercase tracking-widest">
               Notre approche
             </span>
