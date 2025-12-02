@@ -1,3 +1,5 @@
+import dataNetwork from "@/assets/data-network.jpg";
+
 const steps = [
   {
     number: "01",
@@ -18,9 +20,16 @@ const steps = [
 
 export const ProcessSection = () => {
   return (
-    <section className="py-24 lg:py-32 bg-navy text-white relative overflow-hidden">
-      {/* Blueprint grid */}
-      <div className="absolute inset-0 blueprint-grid opacity-30" />
+    <section id="processus" className="py-24 lg:py-32 bg-navy text-white relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src={dataNetwork} 
+          alt="" 
+          className="w-full h-full object-cover opacity-30"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-navy/80 via-navy/90 to-navy" />
+      </div>
       
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">

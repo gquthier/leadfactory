@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
-import { ArrowRight, Video, Image, Globe, Settings, Target, TrendingUp, Check } from "lucide-react";
+import { ArrowRight, Video, Image, Globe, Settings, Target, TrendingUp } from "lucide-react";
+import corporateWorkspace from "@/assets/corporate-workspace.jpg";
 
 const offerings = [
   {
@@ -36,8 +37,16 @@ const offerings = [
 
 export const OfferSection = () => {
   return (
-    <section className="py-24 lg:py-32 bg-background relative overflow-hidden">
-      <div className="absolute inset-0 grid-overlay opacity-20" />
+    <section id="offre" className="py-24 lg:py-32 bg-background relative overflow-hidden">
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img 
+          src={corporateWorkspace} 
+          alt="" 
+          className="w-full h-full object-cover opacity-5"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-background via-background/95 to-background" />
+      </div>
       
       <div className="container mx-auto px-6 lg:px-12 relative z-10">
         <div className="max-w-3xl mx-auto text-center mb-16">
