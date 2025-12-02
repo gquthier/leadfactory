@@ -21,47 +21,58 @@ const pillars = [
 
 export const SolutionSection = () => {
   return (
-    <section id="solution" className="py-24 lg:py-32 bg-background relative border-b border-primary">
+    <section id="solution" className="py-24 lg:py-32 bg-[#FFFDF5] relative border-b-3 border-black">
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="grid lg:grid-cols-2 gap-0 items-stretch">
-          {/* Image */}
-          <div className="relative border-r border-primary">
-            <img 
-              src={teamMeetingBw} 
-              alt="Notre équipe dédiée à votre croissance" 
-              className="w-full h-full object-cover min-h-[400px] lg:min-h-[600px]"
-            />
-          </div>
-
-          {/* Text */}
-          <div className="p-8 lg:p-16 flex flex-col justify-center">
-            <span className="text-xs font-bold text-muted-foreground uppercase tracking-widest">
-              Notre approche
+        <div className="text-center mb-16">
+          <h2 className="responsive-headline mb-8">
+            ON S'OCCUPE DE{" "}
+            <span className="italic text-[#3B82F6] transform -skew-x-12 inline-block">
+              TOUT.
             </span>
-            <h2 className="text-4xl lg:text-5xl font-black text-foreground mt-4 mb-8 leading-tight">
-              On s'occupe de tout.
-              <br />
-              <span className="text-muted-foreground">Vous récoltez.</span>
-            </h2>
+            <br />
+            <span className="text-2xl lg:text-4xl">VOUS RÉCOLTEZ.</span>
+          </h2>
+        </div>
 
-            <div className="space-y-8">
-              {pillars.map((pillar, index) => (
-                <div key={index} className="flex gap-6">
-                  <div className="w-12 h-12 border border-primary flex items-center justify-center flex-shrink-0">
-                    <pillar.icon className="h-5 w-5 text-foreground" />
-                  </div>
-                  <div>
-                    <h3 className="text-lg font-bold text-foreground mb-2">
-                      {pillar.title}
-                    </h3>
-                    <p className="text-muted-foreground leading-relaxed text-sm">
-                      {pillar.description}
-                    </p>
-                  </div>
+        <div className="grid lg:grid-cols-3 gap-8">
+          {pillars.map((pillar, index) => {
+            let bgColor = "#3B82F6"; // default blue
+            let textColor = "text-white";
+            
+            if (index === 0) { // Contacts 100% à vous
+              bgColor = "#FDE047"; // jaune
+              textColor = "text-black";
+            } else if (index === 1) { // Une équipe dédiée
+              bgColor = "#3B82F6"; // bleu
+              textColor = "text-white";
+            } else if (index === 2) { // Zéro engagement
+              bgColor = "#FFC4EB"; // rose
+              textColor = "text-black";
+            }
+            
+            return (
+              <div key={index} className="brutalist-card bg-white text-center">
+                <div className={`w-16 h-16 border-3 border-black flex items-center justify-center mx-auto mb-6`} style={{backgroundColor: bgColor}}>
+                  <pillar.icon className={`h-8 w-8 ${textColor}`} />
                 </div>
-              ))}
-            </div>
-          </div>
+                <h3 className="text-lg font-black text-black mb-4 uppercase tracking-wider">
+                  {pillar.title}
+                </h3>
+                <p className="text-black font-bold leading-relaxed">
+                  {pillar.description}
+                </p>
+              </div>
+            );
+          })}
+        </div>
+
+        <div className="mt-16 brutalist-card bg-[#3B82F6] text-center max-w-4xl mx-auto">
+          <h3 className="text-3xl font-black uppercase mb-2 text-white leading-tight">
+            NOTRE APPROCHE : 100% TRANSPARENTE
+          </h3>
+          <p className="text-2xl font-bold text-white leading-tight">
+            <span className="italic">Pas de partage, pas de revente, pas d'engagement.</span> 🚀
+          </p>
         </div>
       </div>
     </section>

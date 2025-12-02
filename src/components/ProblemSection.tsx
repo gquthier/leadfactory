@@ -1,41 +1,48 @@
 const frustrations = [
-  "Payer pour des contacts qui ne répondent jamais",
-  "Recevoir des \"leads\" partagés avec 10 concurrents",
-  "Perdre du temps avec des gens pas sérieux",
-  "Gérer vous-même des pubs qui ne marchent pas",
-  "Payer des agences hors de prix sans voir de résultats",
+  { emoji: "❌", text: "Payer pour des contacts qui ne répondent jamais" },
+  { emoji: "😤", text: "Recevoir des \"leads\" partagés avec 10 concurrents" },
+  { emoji: "⏰", text: "Perdre du temps avec des gens pas sérieux" },
+  { emoji: "📉", text: "Gérer vous-même des pubs qui ne marchent pas" },
+  { emoji: "💸", text: "Payer des agences hors de prix sans voir de résultats" },
 ];
 
 export const ProblemSection = () => {
   return (
-    <section className="py-24 lg:py-32 bg-background relative border-b border-primary">
+    <section className="pt-16 pb-24 lg:pt-20 lg:pb-32 bg-[#FFFDF5] relative border-b-3 border-black">
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="max-w-3xl">
-          <span className="text-xs font-bold text-muted-foreground uppercase tracking-widest">
-            Le problème
-          </span>
-          <h2 className="text-4xl lg:text-6xl font-black text-foreground mt-4 mb-12 leading-tight">
-            Vous en avez marre de...
+        <div className="text-center mb-16">
+          <h2 className="responsive-headline mb-8">
+            VOUS EN AVEZ{" "}
+            <span className="italic text-[#3B82F6] transform skew-x-12 inline-block">
+              MARRE
+            </span>{" "}
+            DE...
           </h2>
+        </div>
 
-          <div className="space-y-0">
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-6">
             {frustrations.map((item, index) => (
               <div
                 key={index}
-                className="flex items-center gap-6 py-5 border-t border-primary"
+                className="pill-container bg-white flex items-center gap-6"
               >
-                <span className="text-xs font-bold text-muted-foreground w-8">
-                  {String(index + 1).padStart(2, '0')}
+                <div className="text-3xl flex-shrink-0">{item.emoji}</div>
+                <span className="text-xl font-bold text-black uppercase tracking-wider">
+                  {item.text}
                 </span>
-                <span className="text-lg text-foreground font-medium">{item}</span>
               </div>
             ))}
-            <div className="border-t border-primary" />
           </div>
 
-          <p className="text-xl text-muted-foreground mt-12">
-            On connaît. On a créé <span className="text-foreground font-bold">Lead Factory</span> exactement pour ça.
-          </p>
+          <div className="mt-16 brutalist-card bg-[#FFC4EB] text-center max-w-2xl mx-auto">
+            <p className="text-3xl font-black uppercase mb-2 text-black leading-tight">
+              ON CONNAÎT.
+            </p>
+            <p className="text-2xl font-bold text-black leading-tight">
+              On a créé <span className="italic">Lead Factory</span> exactement pour ça.
+            </p>
+          </div>
         </div>
       </div>
     </section>

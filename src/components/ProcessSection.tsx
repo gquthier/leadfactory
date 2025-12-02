@@ -1,73 +1,97 @@
-import handsKeyboardBw from "@/assets/hands-keyboard-bw.jpg";
+import { BarChart3, Rocket, Trophy } from "lucide-react";
 
 const steps = [
   {
     number: "01",
-    title: "On discute 15 minutes",
+    title: "ON DISCUTE 15 MINUTES",
     description: "Vous nous expliquez votre activité, vos clients idéaux, vos objectifs.",
+    icon: BarChart3,
   },
   {
-    number: "02",
-    title: "On crée tout pour vous",
+    number: "02", 
+    title: "ON CRÉE TOUT POUR VOUS",
     description: "Vidéos, visuels, site web, publicités. En quelques jours, tout est prêt.",
+    icon: Rocket,
   },
   {
     number: "03",
-    title: "Vous recevez des contacts",
+    title: "VOUS RECEVEZ DES CONTACTS",
     description: "Les personnes intéressées arrivent dans votre boîte. Vous signez.",
+    icon: Trophy,
   },
 ];
 
 export const ProcessSection = () => {
   return (
-    <section id="processus" className="py-24 lg:py-32 bg-primary text-primary-foreground relative border-b border-primary-foreground/20">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <img 
-          src={handsKeyboardBw} 
-          alt="" 
-          className="w-full h-full object-cover opacity-20"
-        />
-        <div className="absolute inset-0 bg-primary/90" />
-      </div>
-
-      <div className="absolute inset-0 dark-grid" />
-      
-      <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        <div className="max-w-3xl mb-16">
-          <span className="text-xs font-bold text-primary-foreground/50 uppercase tracking-widest">
-            Le processus
-          </span>
-          <h2 className="text-4xl lg:text-6xl font-black text-primary-foreground mt-4 leading-tight">
-            3 étapes.
+    <section id="processus" className="py-24 lg:py-32 bg-[#FFFDF5] border-b-3 border-black">
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="text-center mb-16">
+          <h2 className="responsive-headline mb-8">
+            3{" "}
+            <span className="italic text-[#3B82F6] transform -skew-x-12 inline-block">
+              ÉTAPES.
+            </span>
             <br />
-            <span className="text-primary-foreground/50">C'est tout.</span>
+            <span className="text-3xl lg:text-5xl">C'EST TOUT.</span>
           </h2>
         </div>
 
-        <div className="grid lg:grid-cols-3 gap-0">
+        <div className="grid lg:grid-cols-3 gap-8">
           {steps.map((step, index) => (
             <div
               key={index}
-              className={`p-8 lg:p-10 border-t border-primary-foreground/20 ${index > 0 ? 'lg:border-l' : ''}`}
+              className="brutalist-primary-card relative"
             >
-              <span className="text-6xl lg:text-7xl font-black text-amber/30">
-                {step.number}
-              </span>
-              <h3 className="text-xl font-bold text-primary-foreground mt-4 mb-3">
-                {step.title}
-              </h3>
-              <p className="text-primary-foreground/60 leading-relaxed">
-                {step.description}
-              </p>
+              {/* Browser Window Header */}
+              <div className="browser-window-header mb-8">
+                <div className="flex items-center gap-2 mb-4">
+                  <div className="w-3 h-3 bg-red-500 rounded-full border border-black"></div>
+                  <div className="w-3 h-3 bg-[#FDE047] rounded-full border border-black"></div>
+                  <div className="w-3 h-3 bg-[#3B82F6] rounded-full border border-black"></div>
+                </div>
+                <div className="h-px bg-black"></div>
+              </div>
+
+              {/* Step Number */}
+              <div className="absolute top-4 right-4 w-16 h-16 bg-black text-[#4ADE80] border-3 border-black flex items-center justify-center shadow-[4px_4px_0px_0px_#000000]">
+                <span className="text-2xl font-black">{step.number}</span>
+              </div>
+
+              {/* Content */}
+              <div className="space-y-6">
+                <div className="w-16 h-16 bg-white border-3 border-black flex items-center justify-center">
+                  <step.icon className="w-8 h-8 text-black" />
+                </div>
+                
+                <h3 className="text-xl font-black text-white uppercase tracking-wider">
+                  {step.title}
+                </h3>
+                
+                <p className="text-lg font-bold text-white leading-relaxed">
+                  {step.description}
+                </p>
+
+                {/* Simple Graph Illustration */}
+                <div className="mt-6 h-20 bg-white border-3 border-black p-4 flex items-end justify-center gap-2">
+                  {[40, 60, 80, 95, 100].map((height, i) => (
+                    <div 
+                      key={i} 
+                      className="bg-[#FFC4EB] border border-black flex-1 max-w-3"
+                      style={{ height: `${height}%` }}
+                    ></div>
+                  ))}
+                </div>
+              </div>
             </div>
           ))}
         </div>
 
-        <div className="mt-16 pt-8 border-t border-primary-foreground/20">
-          <p className="text-xl text-primary-foreground/70 max-w-2xl">
-            Pendant ce temps, vous faites votre métier. 
-            <span className="text-amber font-bold"> Nous, on remplit votre carnet de commandes.</span>
+        <div className="mt-16 brutalist-card bg-[#FDE047] text-center max-w-4xl mx-auto">
+          <h3 className="text-2xl font-black uppercase mb-4">
+            PENDANT CE TEMPS, VOUS FAITES VOTRE MÉTIER.
+          </h3>
+          <p className="text-xl font-bold text-black">
+            <span className="italic">Nous, on remplit votre carnet de commandes.</span> 💼✨
           </p>
         </div>
       </div>

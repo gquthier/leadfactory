@@ -1,39 +1,35 @@
+import { Zap, Mail, Phone, MapPin } from "lucide-react";
+
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="py-16 lg:py-24 bg-primary text-primary-foreground">
+    <footer className="bg-[#FFFDF5] border-t-3 border-black py-16 lg:py-20">
       <div className="container mx-auto px-6 lg:px-12">
-        <div className="mb-12">
-          <h2 className="text-5xl lg:text-7xl font-black text-primary-foreground uppercase tracking-tight">
-            LeadFactory
-          </h2>
-        </div>
-
-        <div className="border-t border-primary-foreground/20 pt-8">
-          <div className="flex flex-col lg:flex-row items-start lg:items-center justify-between gap-6">
-            <p className="text-lg text-primary-foreground/70">
-              On vous trouve des clients. Vous, vous les gardez.
-            </p>
-            
-            <div className="flex flex-wrap items-center gap-6 text-xs text-primary-foreground/50 uppercase tracking-wider">
-              <a href="#" className="hover:text-primary-foreground transition-colors">
-                Mentions légales
-              </a>
-              <span>·</span>
-              <a href="#" className="hover:text-primary-foreground transition-colors">
-                Confidentialité
-              </a>
-              <span>·</span>
-              <a href="#" className="hover:text-primary-foreground transition-colors">
-                Contact
-              </a>
+        <div className="text-center">
+          {/* Logo */}
+          <div className="flex items-center justify-center gap-3 mb-8">
+            <div className="w-16 h-16 bg-[#3B82F6] border-3 border-black rounded-full flex items-center justify-center">
+              <Zap className="w-8 h-8 text-white" />
             </div>
+            <span className="text-4xl font-black uppercase tracking-tight text-black">
+              LeadFactory
+            </span>
           </div>
-          
-          <p className="text-xs text-primary-foreground/30 mt-8 uppercase tracking-wider">
-            © {currentYear} Lead Factory. Tous droits réservés.
-          </p>
+
+          {/* Main CTA */}
+          <div className="brutalist-card bg-[#FFC4EB] inline-block mb-8">
+            <p className="text-2xl font-black uppercase text-black">
+              🚀 DÉMARRAGE EN 48H
+            </p>
+          </div>
+
+          {/* Copyright */}
+          <div className="border-t-3 border-black pt-8">
+            <p className="text-black font-bold text-lg">
+              © {currentYear} LeadFactory. Tous droits réservés.
+            </p>
+          </div>
         </div>
       </div>
     </footer>
