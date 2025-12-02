@@ -57,7 +57,6 @@ export const Navbar = () => {
                       { label: "ESN", href: "/esn" },
                       { label: "SaaS & NTech", href: "/saas" },
                       { label: "Services B2B", href: "/services-b2b" },
-                      { label: "E-commerce", href: "/ecommerce" },
                       { label: "Agences Marketing", href: "/agences-marketing" },
                       { label: "Consultants", href: "/consultants" },
                       { label: "Immobilier", href: "/immobilier" },

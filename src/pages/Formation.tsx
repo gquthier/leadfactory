@@ -8,7 +8,6 @@ import { FAQSectionFormation } from "@/components/formation/FAQSectionFormation"
 import { ResultsSectionFormation } from "@/components/formation/ResultsSectionFormation";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-
 export default function Formation() {
   return (
     <>

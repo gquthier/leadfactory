@@ -299,6 +299,20 @@
     -ms-overflow-style: none;
     scrollbar-width: none;
   }
+
+  /* Promo Banner (marquee) */
+  .banner-diagonal { position: relative; height: 80px; transform: skewY(-2.5deg); overflow: hidden; padding-top: 12px; padding-bottom: 12px; }
+  .banner-track { position: absolute; inset: 0; display: flex; align-items: center; white-space: nowrap; overflow: hidden; }
+  .banner-content { display: inline-flex; align-items: center; gap: 3rem; animation: banner-marquee 18s linear infinite; padding: 0 2rem; }
+  .banner-item { @apply font-black uppercase tracking-wider text-black whitespace-nowrap; }
+  .banner-timer { @apply bg-white border-3 border-black px-4 py-2 shadow-[4px_4px_0px_0px_#000000] font-black whitespace-nowrap; }
+}
+
+@media (min-width: 1024px) { .banner-diagonal { height: 72px; } }
+
+@keyframes banner-marquee {
+  0% { transform: translateX(-50%); }
+  100% { transform: translateX(50%); }
 }
 
 @layer utilities {

@@ -8,7 +8,6 @@ import { FAQSectionImmobilier } from "@/components/immobilier/FAQSectionImmobili
 import { ResultsSectionImmobilier } from "@/components/immobilier/ResultsSectionImmobilier";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-
 export default function Immobilier() {
   return (
     <>

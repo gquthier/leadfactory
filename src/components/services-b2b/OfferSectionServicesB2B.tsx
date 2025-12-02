@@ -1,4 +1,5 @@
 import { ArrowRight, Check, Star, Trophy, Zap } from "lucide-react";
+import { CountdownTimer } from "@/components/CountdownTimer";
 
 const offerings = [
   "5 vidéos publicitaires créées par intelligence artificielle",
@@ -40,6 +41,7 @@ export const OfferSectionServicesB2B = () => {
               <div className="mt-6">
                 <span className="text-8xl lg:text-9xl font-black text-black">690</span>
                 <span className="text-4xl font-black">€</span>
+                <div className="mt-1 text-xs font-black uppercase tracking-wider">LE PREMIER MOIS</div>
               </div>
             </div>
             <div className="border-t-4 border-dashed border-black my-8"></div>
@@ -55,6 +57,9 @@ export const OfferSectionServicesB2B = () => {
             </div>
             <div className="border-t-4 border-dashed border-black my-8"></div>
             <div className="text-center">
+              <div className="flex justify-center mb-4 -rotate-2">
+                <CountdownTimer />
+              </div>
               <button className="bg-black text-white border-3 border-black px-6 py-3 font-bold uppercase tracking-wider shadow-[4px_4px_0px_0px_#000000] hover:shadow-[2px_2px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] transition-all text-base mb-4 mx-auto flex items-center justify-center">
                 JE VEUX TESTER MAINTENANT
                 <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0" />

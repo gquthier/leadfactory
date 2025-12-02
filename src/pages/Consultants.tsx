@@ -8,7 +8,6 @@ import { FAQSectionConsultants } from "@/components/consultants/FAQSectionConsul
 import { ResultsSectionConsultants } from "@/components/consultants/ResultsSectionConsultants";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-
 export default function Consultants() {
   return (
     <>

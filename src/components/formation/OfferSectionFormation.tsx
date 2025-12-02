@@ -1,4 +1,5 @@
 import { ArrowRight, Check, Star, Trophy, Zap } from "lucide-react";
+import { CountdownTimer } from "@/components/CountdownTimer";
 const offerings = [
   "5 vidéos de présentation créées par intelligence artificielle",
   "Vidéos qui mettent en valeur vos programmes",
@@ -32,12 +33,16 @@ export const OfferSectionFormation = () => {
               <Trophy className="w-6 h-6 text-black" />
             </div>
             <div className="text-center mb-8 pt-12">
+            <div className="flex justify-center mb-4 -rotate-2">
+              <CountdownTimer />
+            </div>
               <div className="inline-block bg-[#3B82F6] border-3 border-black px-8 py-3 shadow-[4px_4px_0px_0px_#000000]">
                 <span className="text-lg font-black uppercase tracking-wider text-white">TESTEZ NOUS</span>
               </div>
               <div className="mt-6">
                 <span className="text-8xl lg:text-9xl font-black text-black">690</span>
                 <span className="text-4xl font-black">€</span>
+                <div className="mt-1 text-xs font-black uppercase tracking-wider">LE PREMIER MOIS</div>
               </div>
             </div>
             <div className="border-t-4 border-dashed border-black my-8"></div>

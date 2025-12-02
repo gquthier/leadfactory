@@ -7,7 +7,6 @@ import Index from "./pages/Index";
 import ESN from "./pages/ESN";
 import SaaS from "./pages/SaaS";
 import ServicesB2B from "./pages/ServicesB2B";
-import Ecommerce from "./pages/Ecommerce";
 import AgencesMarketing from "./pages/AgencesMarketing";
 import Consultants from "./pages/Consultants";
 import Immobilier from "./pages/Immobilier";
@@ -27,7 +26,6 @@ const App = () => (
           <Route path="/esn" element={<ESN />} />
           <Route path="/saas" element={<SaaS />} />
           <Route path="/services-b2b" element={<ServicesB2B />} />
-          <Route path="/ecommerce" element={<Ecommerce />} />
           <Route path="/agences-marketing" element={<AgencesMarketing />} />
           <Route path="/consultants" element={<Consultants />} />
           <Route path="/immobilier" element={<Immobilier />} />

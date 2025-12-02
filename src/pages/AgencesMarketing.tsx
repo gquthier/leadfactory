@@ -8,7 +8,6 @@ import { FAQSectionAgencesMarketing } from "@/components/agences-marketing/FAQSe
 import { ResultsSectionAgencesMarketing } from "@/components/agences-marketing/ResultsSectionAgencesMarketing";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-
 export default function AgencesMarketing() {
   return (
     <>

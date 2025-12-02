@@ -8,7 +8,6 @@ import { FAQSectionESN } from "@/components/esn/FAQSectionESN";
 import { ResultsSectionESN } from "@/components/esn/ResultsSectionESN";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-
 export default function ESN() {
   return (
     <>

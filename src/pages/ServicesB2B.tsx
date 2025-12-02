@@ -8,7 +8,6 @@ import { FAQSectionServicesB2B } from "@/components/services-b2b/FAQSectionServi
 import { ResultsSectionServicesB2B } from "@/components/services-b2b/ResultsSectionServicesB2B";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-
 export default function ServicesB2B() {
   return (
     <>

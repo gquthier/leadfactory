@@ -42,6 +42,9 @@ export const OfferSection = () => {
 
             {/* Header Section */}
             <div className="text-center mb-8 pt-12">
+              <div className="flex justify-center mb-2 -rotate-2">
+                <span className="inline-block bg-white border-3 border-black px-3 py-1 font-black uppercase tracking-wider text-[10px]">LE PREMIER MOIS</span>
+              </div>
               <div className="inline-block bg-[#3B82F6] border-3 border-black px-8 py-3 shadow-[4px_4px_0px_0px_#000000]">
                 <span className="text-lg font-black uppercase tracking-wider text-white">
                   TESTEZ-NOUS
