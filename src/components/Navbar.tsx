@@ -3,10 +3,10 @@ import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 
 const navLinks = [
-  { label: "Approach", href: "#approach" },
-  { label: "Technology", href: "#technology" },
-  { label: "Results", href: "#results" },
-  { label: "Client Login", href: "#login" },
+  { label: "Solution", href: "#solution" },
+  { label: "Offre", href: "#offre" },
+  { label: "Processus", href: "#processus" },
+  { label: "Témoignages", href: "#results" },
 ];
 
 export const Navbar = () => {
@@ -39,7 +39,7 @@ export const Navbar = () => {
           {/* Desktop CTA */}
           <div className="hidden lg:block">
             <Button variant="navy" size="default">
-              Audit Your Infrastructure
+              Parler à un expert
             </Button>
           </div>
 
@@ -72,7 +72,7 @@ export const Navbar = () => {
                 </a>
               ))}
               <Button variant="navy" size="default" className="mt-2">
-                Audit Your Infrastructure
+                Parler à un expert
               </Button>
             </div>
           </div>

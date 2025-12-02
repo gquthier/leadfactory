@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { RevenueEngineVisualization } from "./RevenueEngineVisualization";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Check } from "lucide-react";
 
 export const HeroSection = () => {
   return (
@@ -15,29 +15,45 @@ export const HeroSection = () => {
             <div className="inline-flex items-center gap-2 px-4 py-2 bg-secondary rounded-full mb-6">
               <span className="w-2 h-2 bg-electric rounded-full animate-pulse" />
               <span className="text-xs font-medium text-muted-foreground uppercase tracking-wider">
-                Revenue Infrastructure
+                Génération de leads B2B
               </span>
             </div>
 
             <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-foreground leading-[1.1] tracking-tight mb-6">
-              Stop Buying Leads.
+              On vous trouve des leads qualifiés en automatique.
               <br />
-              <span className="text-muted-foreground">Build Revenue Assets.</span>
+              <span className="text-muted-foreground">Vous, vous signez.</span>
             </h1>
 
-            <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-xl mb-10">
-              We combine media buying precision with AI automation to generate 
-              predictable annuities for your business. The new standard in digital capital.
+            <p className="text-lg lg:text-xl text-muted-foreground leading-relaxed max-w-xl mb-8">
+              Des clients qualifiés qui vous appartiennent. Sans engagement. 
+              Gestion complète. À partir de 690€.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4">
+            <div className="flex flex-col sm:flex-row gap-4 mb-6">
               <Button variant="electric" size="xl">
-                Start Your Audit
+                Parler à un expert
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
               <Button variant="outline" size="xl">
-                View Case Studies
+                Voir les résultats clients
               </Button>
+            </div>
+
+            {/* Reassurance */}
+            <div className="flex flex-wrap gap-4 text-sm text-muted-foreground">
+              <span className="flex items-center gap-2">
+                <Check className="h-4 w-4 text-electric" />
+                Sans engagement
+              </span>
+              <span className="flex items-center gap-2">
+                <Check className="h-4 w-4 text-electric" />
+                Résultats sous 30 jours
+              </span>
+              <span className="flex items-center gap-2">
+                <Check className="h-4 w-4 text-electric" />
+                Vos contacts vous appartiennent
+              </span>
             </div>
 
             {/* Stats */}
