@@ -20,7 +20,7 @@ const faqs = [
   },
   {
     question: "C'est quoi le piège avec ce prix ?",
-    answer: "Il n'y en a pas. 690€ pour tester un mois complet. Si vous voulez continuer après, on en discute. Si vous voulez arrêter, vous arrêtez. C'est aussi simple que ça.",
+    answer: "Il n'y en a pas. 690€ pour tester un mois complet. Si vous voulez continuer après, on en discute. Si vous voulez arrêter, vous arrêtez.",
   },
   {
     question: "Combien de temps avant d'avoir des résultats ?",
@@ -30,32 +30,36 @@ const faqs = [
 
 export const FAQSection = () => {
   return (
-    <section className="py-24 lg:py-32 bg-background relative overflow-hidden">
-      <div className="absolute inset-0 grid-overlay opacity-20" />
-      
-      <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <span className="text-xs font-medium text-electric uppercase tracking-widest">
-            Questions fréquentes
-          </span>
-          <h2 className="text-3xl lg:text-5xl font-bold text-foreground mt-4 mb-6">
-            Vos questions. Nos réponses.
-          </h2>
-        </div>
+    <section className="py-24 lg:py-32 bg-background relative border-b border-primary">
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20">
+          {/* Left: Header */}
+          <div>
+            <span className="text-xs font-bold text-muted-foreground uppercase tracking-widest">
+              Questions fréquentes
+            </span>
+            <h2 className="text-4xl lg:text-5xl font-black text-foreground mt-4 leading-tight">
+              Vos questions.
+              <br />
+              <span className="text-muted-foreground">Nos réponses.</span>
+            </h2>
+          </div>
 
-        <div className="max-w-2xl mx-auto">
-          <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border-border">
-                <AccordionTrigger className="text-left text-foreground hover:text-electric">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="text-muted-foreground">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+          {/* Right: FAQ */}
+          <div>
+            <Accordion type="single" collapsible className="w-full">
+              {faqs.map((faq, index) => (
+                <AccordionItem key={index} value={`item-${index}`} className="border-primary">
+                  <AccordionTrigger className="text-left text-foreground hover:text-amber font-bold text-base py-6">
+                    {faq.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="text-muted-foreground pb-6">
+                    {faq.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </div>
         </div>
       </div>
     </section>

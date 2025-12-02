@@ -1,69 +1,63 @@
-import { X, Check } from "lucide-react";
-
 const comparisons = [
   {
     others: "Leads partagés avec vos concurrents",
-    us: "Contacts 100% exclusifs, rien que pour vous",
+    us: "Contacts 100% exclusifs",
   },
   {
     others: "Engagement 6 ou 12 mois",
-    us: "Aucun engagement. Vous arrêtez quand vous voulez",
+    us: "Aucun engagement",
   },
   {
     others: "Frais cachés et options payantes",
-    us: "Un prix. Tout est inclus.",
+    us: "Un prix, tout inclus",
   },
   {
-    others: "Plateforme automatique sans humain",
-    us: "Une vraie équipe dédiée à votre réussite",
+    others: "Plateforme automatique",
+    us: "Une vraie équipe dédiée",
   },
   {
-    others: "Leads froids à rappeler 10 fois",
-    us: "Contacts qui ont demandé à être recontactés",
+    others: "Leads froids à rappeler",
+    us: "Contacts qui veulent être contactés",
   },
 ];
 
 export const ComparisonSection = () => {
   return (
-    <section className="py-24 lg:py-32 bg-secondary/30 relative overflow-hidden">
-      <div className="container mx-auto px-6 lg:px-12 relative z-10">
-        <div className="max-w-3xl mx-auto text-center mb-16">
-          <span className="text-xs font-medium text-electric uppercase tracking-widest">
+    <section className="py-24 lg:py-32 bg-background relative border-b border-primary">
+      <div className="container mx-auto px-6 lg:px-12">
+        <div className="max-w-3xl mb-16">
+          <span className="text-xs font-bold text-muted-foreground uppercase tracking-widest">
             Pourquoi nous
           </span>
-          <h2 className="text-3xl lg:text-5xl font-bold text-foreground mt-4 mb-6">
-            On n'est pas comme les autres.
+          <h2 className="text-4xl lg:text-6xl font-black text-foreground mt-4 leading-tight">
+            On n'est pas comme
             <br />
-            <span className="text-muted-foreground">Voici pourquoi.</span>
+            <span className="text-muted-foreground">les autres.</span>
           </h2>
         </div>
 
-        <div className="max-w-4xl mx-auto">
+        <div className="border-2 border-primary">
           {/* Header */}
-          <div className="grid grid-cols-2 gap-4 mb-4">
-            <div className="p-4 text-center">
-              <span className="text-sm font-medium text-muted-foreground">Ce que font les autres</span>
+          <div className="grid grid-cols-2 border-b border-primary">
+            <div className="p-4 lg:p-6 border-r border-primary">
+              <span className="text-xs font-bold text-muted-foreground uppercase tracking-widest">Les autres</span>
             </div>
-            <div className="p-4 text-center">
-              <span className="text-sm font-medium text-electric">Lead Factory</span>
+            <div className="p-4 lg:p-6 bg-amber">
+              <span className="text-xs font-bold text-black uppercase tracking-widest">Lead Factory</span>
             </div>
           </div>
 
           {/* Rows */}
-          <div className="space-y-3">
-            {comparisons.map((item, index) => (
-              <div key={index} className="grid grid-cols-2 gap-4">
-                <div className="flex items-center gap-3 p-4 bg-destructive/5 border border-destructive/20 rounded-lg">
-                  <X className="h-5 w-5 text-destructive flex-shrink-0" />
-                  <span className="text-sm text-foreground/70">{item.others}</span>
-                </div>
-                <div className="flex items-center gap-3 p-4 bg-electric/5 border border-electric/20 rounded-lg">
-                  <Check className="h-5 w-5 text-electric flex-shrink-0" />
-                  <span className="text-sm text-foreground">{item.us}</span>
-                </div>
+          {comparisons.map((item, index) => (
+            <div key={index} className={`grid grid-cols-2 ${index < comparisons.length - 1 ? 'border-b border-primary' : ''}`}>
+              <div className="p-4 lg:p-6 border-r border-primary">
+                <span className="text-sm text-muted-foreground">{item.others}</span>
               </div>
-            ))}
-          </div>
+              <div className="p-4 lg:p-6">
+                <span className="text-sm text-foreground font-bold">{item.us}</span>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </section>
