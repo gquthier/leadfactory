@@ -41,18 +41,22 @@ export const HeroSection = () => {
             </div>
 
             {/* Stats */}
-            <div className="grid grid-cols-3 gap-8 mt-16 pt-8 border-t border-border">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 mt-16 pt-8 border-t border-border">
               <div>
-                <p className="text-3xl lg:text-4xl font-bold text-foreground">$2.4B+</p>
-                <p className="text-sm text-muted-foreground mt-1">Revenue Generated</p>
+                <p className="text-3xl lg:text-4xl font-bold text-foreground">2500+</p>
+                <p className="text-sm text-muted-foreground mt-1">Réunions planifiées</p>
               </div>
               <div>
-                <p className="text-3xl lg:text-4xl font-bold text-foreground">340%</p>
-                <p className="text-sm text-muted-foreground mt-1">Avg. ROI</p>
+                <p className="text-3xl lg:text-4xl font-bold text-foreground">5.0M€</p>
+                <p className="text-sm text-muted-foreground mt-1">Ajoutés au pipeline</p>
               </div>
               <div>
-                <p className="text-3xl lg:text-4xl font-bold text-foreground">98%</p>
-                <p className="text-sm text-muted-foreground mt-1">Client Retention</p>
+                <p className="text-3xl lg:text-4xl font-bold text-foreground">+100</p>
+                <p className="text-sm text-muted-foreground mt-1">Clients accompagnés</p>
+              </div>
+              <div>
+                <p className="text-3xl lg:text-4xl font-bold text-foreground">4.8</p>
+                <p className="text-sm text-muted-foreground mt-1">Note sur Google</p>
               </div>
             </div>
           </div>

@@ -3,28 +3,25 @@ import { ArrowRight, Quote } from "lucide-react";
 
 const testimonials = [
   {
-    quote: "LeadFactory transformed our entire revenue operation. We went from spending $500K/mo on leads to generating them internally at a fraction of the cost.",
-    author: "Sarah Chen",
-    role: "VP of Growth",
-    company: "TechScale Inc.",
-    metric: "340%",
-    metricLabel: "ROI increase",
+    quote: "Une équipe efficace, à l'écoute des contraintes de mon métier. Une grande réactivité, une collaboration fluide. J'ai eu le sentiment d'être écouté, compris et surtout de voir des campagnes différentes et efficaces !",
+    role: "Co-fondateur",
+    sector: "SaaS B2B",
+    metric: "18",
+    metricLabel: "SQL 1ère semaine",
   },
   {
-    quote: "The precision of their targeting is unlike anything we've experienced. Every lead that comes through is qualified and ready to buy.",
-    author: "Marcus Rivera",
-    role: "Chief Revenue Officer",
-    company: "Enterprise Solutions",
-    metric: "$4.2M",
-    metricLabel: "Pipeline generated",
-  },
-  {
-    quote: "We finally have a predictable revenue engine. No more seasonal fluctuations, no more guesswork.",
-    author: "Jennifer Walsh",
+    quote: "Une expérience excellente. Ils savent comment construire des relations solides avec leurs clients, font preuve d'une grande attention et améliorent continuellement leur expertise.",
     role: "CEO",
-    company: "Growth Dynamics",
-    metric: "12x",
-    metricLabel: "Lead quality",
+    sector: "SaaS B2B",
+    metric: "5.0M€",
+    metricLabel: "Pipeline généré",
+  },
+  {
+    quote: "Une équipe de professionnels compétents et sympathiques, un service efficace. Cette coopération nous a apporté beaucoup.",
+    role: "PDG",
+    sector: "Communication B2B",
+    metric: "2500+",
+    metricLabel: "Réunions planifiées",
   },
 ];
 
@@ -67,13 +64,13 @@ export const ResultsSection = () => {
               <div className="flex items-center gap-4 pb-6 border-b border-border">
                 <div className="w-12 h-12 rounded-full bg-secondary flex items-center justify-center">
                   <span className="text-lg font-semibold text-muted-foreground">
-                    {item.author.charAt(0)}
+                    {item.role.charAt(0)}
                   </span>
                 </div>
                 <div>
-                  <p className="font-semibold text-foreground">{item.author}</p>
+                  <p className="font-semibold text-foreground">{item.role}</p>
                   <p className="text-sm text-muted-foreground">
-                    {item.role}, {item.company}
+                    {item.sector}
                   </p>
                 </div>
               </div>
