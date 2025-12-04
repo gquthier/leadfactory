@@ -52,7 +52,7 @@ export const Navbar = () => {
                   <ChevronDown className={`h-4 w-4 ${isSectorsOpen ? "rotate-180" : ""}`} />
                 </button>
                 {isSectorsOpen && (
-                  <div className="absolute right-0 mt-2 w-64 bg-white border-3 border-black shadow-[8px_8px_0px_0px_#000000] p-2 grid grid-cols-1">
+                  <div className="absolute right-0 mt-2 w-[32rem] bg-white border-3 border-black shadow-[8px_8px_0px_0px_#000000] p-2 grid grid-cols-2 gap-2">
                     {[
                       { label: "ESN", href: "/esn" },
                       { label: "SaaS & Tech", href: "/saas" },
@@ -69,7 +69,7 @@ export const Navbar = () => {
                       <Link
                         key={item.href}
                         to={item.href}
-                        className="text-sm font-bold text-black hover:text-[#3B82F6] px-3 py-2 uppercase tracking-wider border-3 border-black bg-white mb-2 last:mb-0 shadow-[2px_2px_0px_0px_#000000] hover:shadow-[1px_1px_0px_0px_#000000]"
+                        className="text-sm font-bold text-black hover:text-[#3B82F6] px-3 py-2 uppercase tracking-wider border-3 border-black bg-white shadow-[2px_2px_0px_0px_#000000] hover:shadow-[1px_1px_0px_0px_#000000]"
                         onClick={() => setIsSectorsOpen(false)}
                       >
                         {item.label}
