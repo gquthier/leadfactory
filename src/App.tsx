@@ -11,6 +11,10 @@ import AgencesMarketing from "./pages/AgencesMarketing";
 import Consultants from "./pages/Consultants";
 import Immobilier from "./pages/Immobilier";
 import Formation from "./pages/Formation";
+import Travaux from "./pages/Travaux";
+import ServicesPersonne from "./pages/ServicesPersonne";
+import Healthcare from "./pages/Healthcare";
+import Tourisme from "./pages/Tourisme";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -30,6 +34,10 @@ const App = () => (
           <Route path="/consultants" element={<Consultants />} />
           <Route path="/immobilier" element={<Immobilier />} />
           <Route path="/formation" element={<Formation />} />
+          <Route path="/travaux" element={<Travaux />} />
+          <Route path="/services-personne" element={<ServicesPersonne />} />
+          <Route path="/healthcare" element={<Healthcare />} />
+          <Route path="/tourisme" element={<Tourisme />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

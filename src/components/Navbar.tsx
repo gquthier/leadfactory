@@ -61,6 +61,10 @@ export const Navbar = () => {
                       { label: "Consultants", href: "/consultants" },
                       { label: "Immobilier", href: "/immobilier" },
                       { label: "Formation", href: "/formation" },
+                      { label: "Travaux", href: "/travaux" },
+                      { label: "Services à la personne", href: "/services-personne" },
+                      { label: "Healthcare", href: "/healthcare" },
+                      { label: "Tourisme", href: "/tourisme" },
                     ].map((item) => (
                       <Link
                         key={item.href}
