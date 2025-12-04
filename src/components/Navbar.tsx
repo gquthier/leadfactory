@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { Menu, X, Zap, ChevronDown } from "lucide-react";
-import { useLocation } from "react-router-dom";
+import { useLocation, Link } from "react-router-dom";
 
 const navLinks = [
   { label: "SOLUTION", href: "#solution" },
@@ -55,20 +55,21 @@ export const Navbar = () => {
                   <div className="absolute right-0 mt-2 w-64 bg-white border-3 border-black shadow-[8px_8px_0px_0px_#000000] p-2 grid grid-cols-1">
                     {[
                       { label: "ESN", href: "/esn" },
-                      { label: "SaaS & NTech", href: "/saas" },
+                      { label: "SaaS & Tech", href: "/saas" },
                       { label: "Services B2B", href: "/services-b2b" },
                       { label: "Agences Marketing", href: "/agences-marketing" },
                       { label: "Consultants", href: "/consultants" },
                       { label: "Immobilier", href: "/immobilier" },
                       { label: "Formation", href: "/formation" },
                     ].map((item) => (
-                      <a
+                      <Link
                         key={item.href}
-                        href={item.href}
+                        to={item.href}
                         className="text-sm font-bold text-black hover:text-[#3B82F6] px-3 py-2 uppercase tracking-wider border-3 border-black bg-white mb-2 last:mb-0 shadow-[2px_2px_0px_0px_#000000] hover:shadow-[1px_1px_0px_0px_#000000]"
+                        onClick={() => setIsSectorsOpen(false)}
                       >
                         {item.label}
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 )}
