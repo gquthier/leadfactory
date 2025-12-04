@@ -155,10 +155,15 @@ export const ResultsSection = () => {
 
           <div className="border-t-4 border-dashed border-black my-8"></div>
 
-          <button className="bg-black text-white border-3 border-black px-6 py-3 font-bold uppercase tracking-wider shadow-[4px_4px_0px_0px_#000000] hover:shadow-[2px_2px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] transition-all text-base flex items-center justify-center mx-auto mb-6">
+          <a
+            href="https://calendly.com/contact-leadfactory/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-black text-white border-3 border-black px-6 py-3 font-bold uppercase tracking-wider shadow-[4px_4px_0px_0px_#000000] hover:shadow-[2px_2px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] transition-all text-base flex items-center justify-center mx-auto mb-6"
+          >
             PARLER À UN EXPERT
             <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0" />
-          </button>
+          </a>
           
           <div className="brutalist-card bg-[#FDE047] inline-block">
             <p className="text-lg font-black">

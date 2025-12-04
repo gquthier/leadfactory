@@ -79,9 +79,14 @@ export const Navbar = () => {
 
           {/* Desktop CTA */}
           <div className="hidden lg:block">
-            <button className="brutalist-button text-sm">
+            <a
+              href="https://calendly.com/contact-leadfactory/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="brutalist-button text-sm inline-block"
+            >
               PARLER À UN EXPERT
-            </button>
+            </a>
           </div>
 
           {/* Mobile Menu Button */}
@@ -112,9 +117,14 @@ export const Navbar = () => {
                   {link.label}
                 </a>
               ))}
-              <button className="brutalist-button mt-4">
+              <a
+                href="https://calendly.com/contact-leadfactory/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="brutalist-button mt-4 inline-block text-center"
+              >
                 PARLER À UN EXPERT
-              </button>
+              </a>
             </div>
           </div>
         )}

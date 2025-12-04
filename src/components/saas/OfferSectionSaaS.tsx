@@ -77,10 +77,15 @@ export const OfferSectionSaaS = () => {
             <div className="border-t-4 border-dashed border-black my-8"></div>
 
             <div className="text-center">
-              <button className="bg-black text-white border-3 border-black px-6 py-3 font-bold uppercase tracking-wider shadow-[4px_4px_0px_0px_#000000] hover:shadow-[2px_2px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] transition-all text-base mb-4 mx-auto flex items-center justify-center">
+              <a
+                href="https://calendly.com/contact-leadfactory/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-black text-white border-3 border-black px-6 py-3 font-bold uppercase tracking-wider shadow-[4px_4px_0px_0px_#000000] hover:shadow-[2px_2px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] transition-all text-base mb-4 mx-auto flex items-center justify-center"
+              >
                 JE VEUX TESTER MAINTENANT
                 <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0" />
-              </button>
+              </a>
               <div className="flex items-center justify-center gap-4 text-lg font-bold">
                 <Zap className="w-6 h-6 text-[#FDE047]" />
                 <span>DÉMARRAGE EN 48H</span>

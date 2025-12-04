@@ -41,10 +41,15 @@ export const HeroSectionSaaS = () => {
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4 mb-8">
-              <button className="bg-black text-white border-3 border-black px-6 py-3 font-bold uppercase tracking-wider shadow-[4px_4px_0px_0px_#000000] hover:shadow-[2px_2px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] transition-all text-sm flex items-center justify-center">
+              <a
+                href="https://calendly.com/contact-leadfactory/30min"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-black text-white border-3 border-black px-6 py-3 font-bold uppercase tracking-wider shadow-[4px_4px_0px_0px_#000000] hover:shadow-[2px_2px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] transition-all text-sm flex items-center justify-center"
+              >
                 TESTER MAINTENANT POUR 690€
                 <ArrowRight className="ml-2 h-4 w-4 flex-shrink-0" />
-              </button>
+              </a>
               <button className="bg-[#FFC4EB] text-black border-3 border-black px-6 py-3 font-bold uppercase tracking-wider shadow-[4px_4px_0px_0px_#000000] hover:shadow-[2px_2px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] transition-all text-sm whitespace-nowrap">
                 VOIR LES RÉSULTATS
               </button>
