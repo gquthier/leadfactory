@@ -1,4 +1,4 @@
-import { ArrowRight, Check, Star, Trophy, Zap } from "lucide-react";
+import { ArrowRight, Check, Star, Trophy, Zap, Sparkles } from "lucide-react";
 import { CountdownTimer } from "@/components/CountdownTimer";
 
 const offerings = [
@@ -20,7 +20,7 @@ export const OfferSectionESN = () => {
             <span className="italic text-[#3B82F6] transform skew-x-12 inline-block">
               MOIS
             </span>{" "}
-            POUR 690€
+            POUR 749€
             <br />
             <span className="text-2xl lg:text-4xl">VOICI CE QUE VOUS OBTENEZ :</span>
           </h2>
@@ -50,7 +50,7 @@ export const OfferSectionESN = () => {
                 </span>
               </div>
               <div className="mt-6">
-                <span className="text-8xl lg:text-9xl font-black text-black">690</span>
+                <span className="text-8xl lg:text-9xl font-black text-black">749</span>
                 <span className="text-4xl font-black">€</span>
                 <div className="mt-1 text-xs font-black uppercase tracking-wider">LE PREMIER MOIS</div>
               </div>
@@ -79,7 +79,18 @@ export const OfferSectionESN = () => {
             {/* Dashed Separator */}
             <div className="border-t-4 border-dashed border-black my-8"></div>
 
-            {/* CTA Section */}
+                       {/* Urgency Banner */}
+            <div className="mb-6 p-4 bg-[#FFC4EB] border-3 border-black shadow-[4px_4px_0px_0px_#000000]">
+              <div className="flex items-center justify-center gap-3 flex-wrap">
+                <Sparkles className="w-5 h-5 text-black" />
+                <p className="text-sm font-black uppercase tracking-wider text-black text-center">
+                  ⏰ Offre spéciale janvier 2026 • Uniquement disponible en janvier
+                </p>
+                <Sparkles className="w-5 h-5 text-black" />
+              </div>
+            </div>
+
+ {/* CTA Section */}
             <div className="text-center">
               <div className="flex justify-center mb-4 -rotate-2">
                 <CountdownTimer />

@@ -7,10 +7,12 @@ import { ComparisonSectionSaaS } from "@/components/saas/ComparisonSectionSaaS";
 import { FAQSectionSaaS } from "@/components/saas/FAQSectionSaaS";
 import { ResultsSectionSaaS } from "@/components/saas/ResultsSectionSaaS";
 import { Navbar } from "@/components/Navbar";
+import { NewYearBanner } from "@/components/NewYearBanner";
 import { Footer } from "@/components/Footer";
 export default function SaaS() {
   return (
     <>
+      <NewYearBanner />
       <Navbar />
       <main>
         <HeroSectionSaaS />

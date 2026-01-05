@@ -7,10 +7,12 @@ import { ComparisonSectionServicesB2B } from "@/components/services-b2b/Comparis
 import { FAQSectionServicesB2B } from "@/components/services-b2b/FAQSectionServicesB2B";
 import { ResultsSectionServicesB2B } from "@/components/services-b2b/ResultsSectionServicesB2B";
 import { Navbar } from "@/components/Navbar";
+import { NewYearBanner } from "@/components/NewYearBanner";
 import { Footer } from "@/components/Footer";
 export default function ServicesB2B() {
   return (
     <>
+      <NewYearBanner />
       <Navbar />
       <main>
         <HeroSectionServicesB2B />

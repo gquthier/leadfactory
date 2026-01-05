@@ -7,10 +7,12 @@ import { ComparisonSectionESN } from "@/components/esn/ComparisonSectionESN";
 import { FAQSectionESN } from "@/components/esn/FAQSectionESN";
 import { ResultsSectionESN } from "@/components/esn/ResultsSectionESN";
 import { Navbar } from "@/components/Navbar";
+import { NewYearBanner } from "@/components/NewYearBanner";
 import { Footer } from "@/components/Footer";
 export default function ESN() {
   return (
     <>
+      <NewYearBanner />
       <Navbar />
       <main>
         <HeroSectionESN />

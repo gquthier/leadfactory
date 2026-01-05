@@ -35,7 +35,7 @@ export const HeroSection = () => {
               </div>
               <div className="bg-white border-3 border-black rounded-full px-4 py-2 shadow-[4px_4px_0px_0px_#000000] whitespace-nowrap">
                 <p className="text-sm font-bold">
-                  💰 À partir de 690€
+                  💰 Offre janvier : 749€
                 </p>
               </div>
             </div>

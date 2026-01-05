@@ -7,11 +7,13 @@ import { ComparisonSectionHealthcare } from "@/components/healthcare/ComparisonS
 import { FAQSectionHealthcare } from "@/components/healthcare/FAQSectionHealthcare";
 import { ResultsSectionHealthcare } from "@/components/healthcare/ResultsSectionHealthcare";
 import { Navbar } from "@/components/Navbar";
+import { NewYearBanner } from "@/components/NewYearBanner";
 import { Footer } from "@/components/Footer";
 
 export default function Healthcare() {
   return (
     <>
+      <NewYearBanner />
       <Navbar />
       <main>
         <HeroSectionHealthcare />

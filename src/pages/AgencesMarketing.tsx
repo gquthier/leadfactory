@@ -7,10 +7,12 @@ import { ComparisonSectionAgencesMarketing } from "@/components/agences-marketin
 import { FAQSectionAgencesMarketing } from "@/components/agences-marketing/FAQSectionAgencesMarketing";
 import { ResultsSectionAgencesMarketing } from "@/components/agences-marketing/ResultsSectionAgencesMarketing";
 import { Navbar } from "@/components/Navbar";
+import { NewYearBanner } from "@/components/NewYearBanner";
 import { Footer } from "@/components/Footer";
 export default function AgencesMarketing() {
   return (
     <>
+      <NewYearBanner />
       <Navbar />
       <main>
         <HeroSectionAgencesMarketing />

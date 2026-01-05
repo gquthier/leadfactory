@@ -7,10 +7,12 @@ import { ComparisonSectionFormation } from "@/components/formation/ComparisonSec
 import { FAQSectionFormation } from "@/components/formation/FAQSectionFormation";
 import { ResultsSectionFormation } from "@/components/formation/ResultsSectionFormation";
 import { Navbar } from "@/components/Navbar";
+import { NewYearBanner } from "@/components/NewYearBanner";
 import { Footer } from "@/components/Footer";
 export default function Formation() {
   return (
     <>
+      <NewYearBanner />
       <Navbar />
       <main>
         <HeroSectionFormation />

@@ -7,10 +7,12 @@ import { ComparisonSectionImmobilier } from "@/components/immobilier/ComparisonS
 import { FAQSectionImmobilier } from "@/components/immobilier/FAQSectionImmobilier";
 import { ResultsSectionImmobilier } from "@/components/immobilier/ResultsSectionImmobilier";
 import { Navbar } from "@/components/Navbar";
+import { NewYearBanner } from "@/components/NewYearBanner";
 import { Footer } from "@/components/Footer";
 export default function Immobilier() {
   return (
     <>
+      <NewYearBanner />
       <Navbar />
       <main>
         <HeroSectionImmobilier />

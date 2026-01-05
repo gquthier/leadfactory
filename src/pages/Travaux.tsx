@@ -7,11 +7,13 @@ import { ComparisonSectionTravaux } from "@/components/travaux/ComparisonSection
 import { FAQSectionTravaux } from "@/components/travaux/FAQSectionTravaux";
 import { ResultsSectionTravaux } from "@/components/travaux/ResultsSectionTravaux";
 import { Navbar } from "@/components/Navbar";
+import { NewYearBanner } from "@/components/NewYearBanner";
 import { Footer } from "@/components/Footer";
 
 export default function Travaux() {
   return (
     <>
+      <NewYearBanner />
       <Navbar />
       <main>
         <HeroSectionTravaux />

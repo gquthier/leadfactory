@@ -7,11 +7,13 @@ import { ComparisonSectionServicesPersonne } from "@/components/services-personn
 import { FAQSectionServicesPersonne } from "@/components/services-personne/FAQSectionServicesPersonne";
 import { ResultsSectionServicesPersonne } from "@/components/services-personne/ResultsSectionServicesPersonne";
 import { Navbar } from "@/components/Navbar";
+import { NewYearBanner } from "@/components/NewYearBanner";
 import { Footer } from "@/components/Footer";
 
 export default function ServicesPersonne() {
   return (
     <>
+      <NewYearBanner />
       <Navbar />
       <main>
         <HeroSectionServicesPersonne />

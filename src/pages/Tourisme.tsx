@@ -7,11 +7,13 @@ import { ComparisonSectionTourisme } from "@/components/tourisme/ComparisonSecti
 import { FAQSectionTourisme } from "@/components/tourisme/FAQSectionTourisme";
 import { ResultsSectionTourisme } from "@/components/tourisme/ResultsSectionTourisme";
 import { Navbar } from "@/components/Navbar";
+import { NewYearBanner } from "@/components/NewYearBanner";
 import { Footer } from "@/components/Footer";
 
 export default function Tourisme() {
   return (
     <>
+      <NewYearBanner />
       <Navbar />
       <main>
         <HeroSectionTourisme />
