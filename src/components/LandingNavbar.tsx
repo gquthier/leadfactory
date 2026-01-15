@@ -1,10 +1,10 @@
 import { Zap } from "lucide-react";
 
 export const LandingNavbar = () => {
-  const scrollToTypeform = () => {
-    const typeformElement = document.querySelector('[data-tf-live]');
-    if (typeformElement) {
-      typeformElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
+  const scrollToTally = () => {
+    const tallyElement = document.querySelector('[data-tally-src]');
+    if (tallyElement) {
+      tallyElement.scrollIntoView({ behavior: 'smooth', block: 'center' });
     }
   };
 
@@ -24,7 +24,7 @@ export const LandingNavbar = () => {
 
           {/* CTA Button */}
           <button
-            onClick={scrollToTypeform}
+            onClick={scrollToTally}
             className="brutalist-button text-sm"
           >
             COMMENCER

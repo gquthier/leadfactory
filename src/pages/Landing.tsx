@@ -10,15 +10,26 @@ import { useEffect } from "react";
 
 const Landing = () => {
   useEffect(() => {
-    // Load Typeform embed script
-    const script = document.createElement('script');
-    script.src = '//embed.typeform.com/next/embed.js';
-    script.async = true;
-    document.body.appendChild(script);
-
-    return () => {
-      document.body.removeChild(script);
+    // Load Tally embed script
+    const loadTally = () => {
+      if (typeof window.Tally !== 'undefined') {
+        window.Tally.loadEmbeds();
+      } else {
+        document.querySelectorAll('iframe[data-tally-src]:not([src])').forEach((e) => {
+          e.src = e.dataset.tallySrc;
+        });
+      }
     };
+
+    if (typeof window.Tally !== 'undefined') {
+      loadTally();
+    } else if (document.querySelector('script[src="https://tally.so/widgets/embed.js"]') == null) {
+      const script = document.createElement('script');
+      script.src = 'https://tally.so/widgets/embed.js';
+      script.onload = loadTally;
+      script.onerror = loadTally;
+      document.body.appendChild(script);
+    }
   }, []);
 
   return (
@@ -98,14 +109,21 @@ const Landing = () => {
               </div>
             </div>
 
-            {/* First Typeform */}
+            {/* First Tally Form */}
             <div className="max-w-3xl mx-auto">
               <h3 className="text-2xl sm:text-3xl font-black text-center mb-6">
                 Remplissez ce formulaire pour commencer
               </h3>
-              <div style={{ height: '500px' }}>
-                <div data-tf-live="01KF0QVCZNC9YFK2XCEDGK9V35" style={{ width: '100%', height: '100%' }}></div>
-              </div>
+              <iframe
+                data-tally-src="https://tally.so/embed/VLPvNM?alignLeft=1&hideTitle=1&dynamicHeight=1&formEventsForwarding=1"
+                loading="lazy"
+                width="100%"
+                height="1403"
+                frameBorder="0"
+                marginHeight="0"
+                marginWidth="0"
+                title="Leadfactory"
+              ></iframe>
             </div>
           </div>
         </section>
@@ -119,10 +137,19 @@ const Landing = () => {
         {/* On s'occupe de tout Section */}
         <SolutionSection />
 
-        {/* Second Typeform */}
+        {/* Second Tally Form */}
         <section className="bg-white py-20 px-6 lg:px-12 border-t-3 border-black">
-          <div className="container mx-auto max-w-3xl" style={{ height: '500px' }}>
-            <div data-tf-live="01KF0QVCZNC9YFK2XCEDGK9V35" style={{ width: '100%', height: '100%' }}></div>
+          <div className="container mx-auto max-w-3xl">
+            <iframe
+              data-tally-src="https://tally.so/embed/VLPvNM?alignLeft=1&hideTitle=1&dynamicHeight=1&formEventsForwarding=1"
+              loading="lazy"
+              width="100%"
+              height="1403"
+              frameBorder="0"
+              marginHeight="0"
+              marginWidth="0"
+              title="Leadfactory"
+            ></iframe>
           </div>
         </section>
 
@@ -135,10 +162,19 @@ const Landing = () => {
         {/* Deux expertises éprouvées Section */}
         <ExpertiseSection />
 
-        {/* Third Typeform */}
+        {/* Third Tally Form */}
         <section className="bg-[#FFFDF5] py-20 px-6 lg:px-12 border-t-3 border-black">
-          <div className="container mx-auto max-w-3xl" style={{ height: '500px' }}>
-            <div data-tf-live="01KF0QVCZNC9YFK2XCEDGK9V35" style={{ width: '100%', height: '100%' }}></div>
+          <div className="container mx-auto max-w-3xl">
+            <iframe
+              data-tally-src="https://tally.so/embed/VLPvNM?alignLeft=1&hideTitle=1&dynamicHeight=1&formEventsForwarding=1"
+              loading="lazy"
+              width="100%"
+              height="1403"
+              frameBorder="0"
+              marginHeight="0"
+              marginWidth="0"
+              title="Leadfactory"
+            ></iframe>
           </div>
         </section>
 
