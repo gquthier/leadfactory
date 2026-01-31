@@ -320,3 +320,134 @@
     text-wrap: balance;
   }
 }
+
+/* Blog Prose Styles - Optimized for readability with brutalist accents */
+@layer components {
+  .prose-brutalist {
+    @apply text-gray-800 leading-relaxed;
+  }
+
+  .prose-brutalist h2 {
+    @apply text-2xl lg:text-3xl font-black uppercase tracking-tight mt-12 mb-6 pb-3 border-b-3 border-black;
+  }
+
+  .prose-brutalist h3 {
+    @apply text-xl lg:text-2xl font-bold uppercase tracking-tight mt-8 mb-4;
+  }
+
+  .prose-brutalist h4 {
+    @apply text-lg font-bold mt-6 mb-3;
+  }
+
+  .prose-brutalist p {
+    @apply mb-6 text-lg leading-relaxed;
+  }
+
+  .prose-brutalist a {
+    @apply text-[#3B82F6] font-semibold underline decoration-2 underline-offset-2 hover:bg-[#FDE047] hover:no-underline transition-all;
+  }
+
+  .prose-brutalist strong {
+    @apply font-bold text-black;
+  }
+
+  .prose-brutalist em {
+    @apply italic;
+  }
+
+  .prose-brutalist ul {
+    @apply my-6 ml-0 space-y-3;
+  }
+
+  .prose-brutalist ul li {
+    @apply relative pl-8 text-lg;
+  }
+
+  .prose-brutalist ul li::before {
+    content: '→';
+    @apply absolute left-0 text-[#3B82F6] font-bold;
+  }
+
+  .prose-brutalist ol {
+    @apply my-6 ml-0 space-y-3 list-none counter-reset[item];
+  }
+
+  .prose-brutalist ol li {
+    @apply relative pl-10 text-lg;
+    counter-increment: item;
+  }
+
+  .prose-brutalist ol li::before {
+    content: counter(item);
+    @apply absolute left-0 w-7 h-7 bg-[#3B82F6] text-white font-bold text-sm flex items-center justify-center border-2 border-black;
+  }
+
+  .prose-brutalist blockquote {
+    @apply my-8 p-6 bg-[#FDE047] border-l-4 border-black italic text-lg;
+  }
+
+  .prose-brutalist blockquote p {
+    @apply mb-0;
+  }
+
+  .prose-brutalist code {
+    @apply bg-gray-100 px-2 py-1 text-sm font-mono border border-gray-300;
+  }
+
+  .prose-brutalist pre {
+    @apply my-8 p-6 bg-gray-900 text-gray-100 overflow-x-auto border-3 border-black shadow-[8px_8px_0px_0px_#3B82F6];
+  }
+
+  .prose-brutalist pre code {
+    @apply bg-transparent border-none p-0 text-sm;
+  }
+
+  .prose-brutalist img {
+    @apply my-8 w-full border-3 border-black shadow-[8px_8px_0px_0px_#000000];
+  }
+
+  .prose-brutalist figure {
+    @apply my-8;
+  }
+
+  .prose-brutalist figcaption {
+    @apply mt-3 text-center text-sm text-gray-600 italic;
+  }
+
+  .prose-brutalist table {
+    @apply w-full my-8 border-collapse border-3 border-black;
+  }
+
+  .prose-brutalist thead {
+    @apply bg-black text-white;
+  }
+
+  .prose-brutalist th {
+    @apply px-4 py-3 text-left font-bold uppercase text-sm tracking-wider;
+  }
+
+  .prose-brutalist td {
+    @apply px-4 py-3 border-b-2 border-black;
+  }
+
+  .prose-brutalist tbody tr:nth-child(even) {
+    @apply bg-gray-50;
+  }
+
+  .prose-brutalist hr {
+    @apply my-12 border-0 h-1 bg-black;
+  }
+
+  /* Callout boxes */
+  .prose-brutalist .callout-info {
+    @apply my-8 p-6 bg-[#3B82F6]/10 border-3 border-[#3B82F6];
+  }
+
+  .prose-brutalist .callout-warning {
+    @apply my-8 p-6 bg-[#FDE047]/30 border-3 border-[#FDE047];
+  }
+
+  .prose-brutalist .callout-success {
+    @apply my-8 p-6 bg-[#58BC82]/10 border-3 border-[#58BC82];
+  }
+}

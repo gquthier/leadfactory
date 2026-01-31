@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>LeadFactory Blog</title>
+    <link>https://leadfactory.com/blog</link>
+    <description>Conseils, stratégies et insights pour générer plus de leads qualifiés et développer votre business B2B.</description>
+    <language>fr-FR</language>
+    <lastBuildDate>Sat, 31 Jan 2026 15:45:17 GMT</lastBuildDate>
+    <atom:link href="https://leadfactory.com/rss.xml" rel="self" type="application/rss+xml"/>
+    <item>
+      <title>L&apos;impact de l&apos;IA sur le Copywriting B2B</title>
+      <link>https://leadfactory.com/blog/ia-copywriting-b2b</link>
+      <guid isPermaLink="true">https://leadfactory.com/blog/ia-copywriting-b2b</guid>
+      <description>L&apos;IA ne remplace pas les copywriters, elle les transforme en éditeurs de haute précision. Analyse d&apos;une révolution.</description>
+      <pubDate>Wed, 28 Jan 2026 09:00:00 GMT</pubDate>
+      <author>ASIO</author>
+      <category>copywriting</category>
+      <category>ia</category>
+      <category>b2b</category>
+      <category>conversion</category>
+    </item>
+    <item>
+      <title>5 Stratégies de Lead Generation qui vont dominer 2026</title>
+      <link>https://leadfactory.com/blog/strategies-lead-gen-2026</link>
+      <guid isPermaLink="true">https://leadfactory.com/blog/strategies-lead-gen-2026</guid>
+      <description>Découvrez comment l&apos;IA et la personnalisation de masse redéfinissent la prospection B2B pour l&apos;année à venir.</description>
+      <pubDate>Sun, 25 Jan 2026 14:30:00 GMT</pubDate>
+      <author>ASIO</author>
+      <category>lead-gen</category>
+      <category>marketing</category>
+      <category>strategie</category>
+      <category>b2b</category>
+    </item>
+    <item>
+      <title>Comment optimiser votre SEO en 2026 : Guide complet</title>
+      <link>https://leadfactory.com/blog/comment-optimiser-seo-2026</link>
+      <guid isPermaLink="true">https://leadfactory.com/blog/comment-optimiser-seo-2026</guid>
+      <description>Découvrez les meilleures pratiques SEO pour 2026 et apprenez comment améliorer votre visibilité sur les moteurs de recherche avec des stratégies concrètes.</description>
+      <pubDate>Thu, 22 Jan 2026 10:00:00 GMT</pubDate>
+      <author>ASIO</author>
+      <category>seo</category>
+      <category>marketing</category>
+      <category>google</category>
+      <category>référencement</category>
+    </item>
+  </channel>
+</rss>

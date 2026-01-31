@@ -1,4 +1,5 @@
-import { Zap, Mail, Phone, MapPin } from "lucide-react";
+import { Zap, Mail, Phone, MapPin, BookOpen } from "lucide-react";
+import { Link } from "react-router-dom";
 
 export const Footer = () => {
   const currentYear = new Date().getFullYear();
@@ -22,6 +23,17 @@ export const Footer = () => {
             <p className="text-2xl font-black uppercase text-black">
               🚀 DÉMARRAGE EN 48H
             </p>
+          </div>
+
+          {/* Blog Link */}
+          <div className="mb-8">
+            <Link
+              to="/blog"
+              className="inline-flex items-center gap-2 bg-[#3B82F6] text-white font-bold text-lg px-6 py-3 border-3 border-black rounded-lg hover:bg-[#2563EB] transition-colors shadow-[4px_4px_0px_0px_rgba(0,0,0,1)] hover:shadow-[2px_2px_0px_0px_rgba(0,0,0,1)] hover:translate-x-[2px] hover:translate-y-[2px]"
+            >
+              <BookOpen className="w-5 h-5" />
+              DÉCOUVRIR NOTRE BLOG
+            </Link>
           </div>
 
           {/* Copyright */}

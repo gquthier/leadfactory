@@ -7,6 +7,7 @@ const navLinks = [
   { label: "OFFRE", href: "#offre" },
   { label: "PROCESSUS", href: "#processus" },
   { label: "TÉMOIGNAGES", href: "#results" },
+  { label: "BLOG", href: "/blog", isRoute: true },
 ];
 
 export const Navbar = () => {
@@ -32,13 +33,23 @@ export const Navbar = () => {
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8">
             {navLinks.map((link) => (
-              <a
-                key={link.label}
-                href={link.href}
-                className="text-sm font-bold text-black hover:text-[#3B82F6] transition-colors duration-100 uppercase tracking-wider border-b-2 border-transparent hover:border-black pb-1"
-              >
-                {link.label}
-              </a>
+              link.isRoute ? (
+                <Link
+                  key={link.label}
+                  to={link.href}
+                  className="text-sm font-bold text-black hover:text-[#3B82F6] transition-colors duration-100 uppercase tracking-wider border-b-2 border-transparent hover:border-black pb-1"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className="text-sm font-bold text-black hover:text-[#3B82F6] transition-colors duration-100 uppercase tracking-wider border-b-2 border-transparent hover:border-black pb-1"
+                >
+                  {link.label}
+                </a>
+              )
             ))}
 
             {/* Sectors dropdown only on homepage */}
@@ -112,14 +123,25 @@ export const Navbar = () => {
           <div className="lg:hidden py-6 border-t-3 border-black bg-[#FDE047]">
             <div className="flex flex-col gap-4">
               {navLinks.map((link) => (
-                <a
-                  key={link.label}
-                  href={link.href}
-                  className="text-lg font-bold text-black hover:text-[#3B82F6] py-3 px-4 uppercase tracking-wider border-3 border-black bg-white shadow-[4px_4px_0px_0px_#000000] hover:shadow-[2px_2px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
-                  onClick={() => setIsOpen(false)}
-                >
-                  {link.label}
-                </a>
+                link.isRoute ? (
+                  <Link
+                    key={link.label}
+                    to={link.href}
+                    className="text-lg font-bold text-black hover:text-[#3B82F6] py-3 px-4 uppercase tracking-wider border-3 border-black bg-white shadow-[4px_4px_0px_0px_#000000] hover:shadow-[2px_2px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.label}
+                  </Link>
+                ) : (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    className="text-lg font-bold text-black hover:text-[#3B82F6] py-3 px-4 uppercase tracking-wider border-3 border-black bg-white shadow-[4px_4px_0px_0px_#000000] hover:shadow-[2px_2px_0px_0px_#000000] hover:translate-x-[2px] hover:translate-y-[2px] transition-all"
+                    onClick={() => setIsOpen(false)}
+                  >
+                    {link.label}
+                  </a>
+                )
               ))}
               <a
                 href="https://calendly.com/contact-leadfactory/30min"
